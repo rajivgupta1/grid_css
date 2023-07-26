@@ -4,24 +4,25 @@
     box-sizing: border-box;
 }
 main{
-    width: 90%;
+    width: 75%;
     margin: 50px auto;
     text-align: center;
     border: 2px solid black;
     color: white;
-    display: grid;
-    grid-template-rows: 150px 150px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2px;
 
+    display: grid;
+    grid-template-rows: 60px 100px 200px 60px;
+    grid-template-columns: repeat(3, 1fr) 100px;
+    grid-gap: 2px;
 }
 
 .div1{
     background: red;
+    grid-column: 1/-1;
+
 }
 .div2{
     background: yellowgreen;
-    grid-column: 1/-1;
 }
 .div3{
     background: orange;
@@ -31,12 +32,17 @@ main{
 }
 .div5{
     background: blue;
-    grid-row-start: 1; 
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-row: 2/4;
+    grid-column: 4/5;
+
 }
 
 .div6{
     background: cyan;
+    grid-column: 1/4;
+}
+
+.div7{
+    background-color: burlywood;
+    grid-column: 1/-1;
 }
